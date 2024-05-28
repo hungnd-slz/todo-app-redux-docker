@@ -7,8 +7,7 @@ export const fetch = (status) => {
 };
 
 export const update = (item, id) => {
-    console.log({item, id});
-    return restClientService.put(baseUrl, {id: id, data: item});
+    return restClientService.put(baseUrl, {params: {id}, data:{name: item}});
 };
 
 // export const assign$ = function (channelType, settingId, groupLevel, { agents, teams }) {
@@ -31,6 +30,7 @@ export const update = (item, id) => {
 
 export default {
   fetch,
+  update
 //   assign$,
 //   unassign$,
 //   fetchCandidates$,

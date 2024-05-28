@@ -7,9 +7,9 @@ export const fetchTodoItems = createAsyncThunk('todos/fetchTodos', async (status
   return response.data
 })
 
-export const updateTodoItems = createAsyncThunk('todos/updateTodos', async (item) => {
-  console.log(item);
-  const response = await todoItemResource.update(item,item.id);
+export const updateTodoItems = createAsyncThunk('todos/updateTodos', async ({id, item}) => {
+  console.log(id);
+  const response = await todoItemResource.update(item, id);
   return response.data
 })
 

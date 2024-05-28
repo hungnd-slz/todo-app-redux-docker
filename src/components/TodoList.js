@@ -27,6 +27,7 @@ const renderTodoList = (props, todoType) => {
   let filterList = props.todos;
   //console.log(props.fetchTodo(todoType));
   //if (todoType !== 'all') filterList = props.fetchTodo(todoType);
+  console.log(filterList);
   return (
     filterList?.todos?.map((item) => (
       <TodoItem
